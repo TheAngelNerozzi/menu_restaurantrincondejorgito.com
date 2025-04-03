@@ -2,6 +2,15 @@ import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
 
+const deliveryServices = [
+  { name: 'Postmates', icon: '/postmates.com.png', link: 'https://postmates.com/store/el-rincon-de-jorgito/5bJZ1AhOV82Z2dBj87GKJQ?diningMode=PICKUP&utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas' },
+  { name: 'Clover', icon: '/clover.com.png', link: 'https://www.clover.com/online-ordering/el-rincon-de-jorgito-san-francisco' },
+  { name: 'Seamless', icon: '/seamless.com.png', link: 'https://www.seamless.com/menu/el-rincon-de-jorgito-1850-cesar-chavez-st-san-francisco/7752408?utm_source=google&utm_medium=organic&utm_campaign=place-action-link&pickup=true&rwg_token=AAiGsoYk4kzdTgdq09BMOw19NfXkgOkBgAjRYGhhQQXIstO59HzzdJu_xwdLZU3X0RB0pp8n8KLT1lhCrjgupaek1giWHiZyCA%3D%3D' },
+  { name: 'UberEats', icon: '/ubereats.com.png', link: 'https://www.ubereats.com/store/el-rincon-de-jorgito/5bJZ1AhOV82Z2dBj87GKJQ?diningMode=PICKUP&utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas' },
+  { name: 'GrubHub', icon: '/grubhub.com.png', link: 'https://www.grubhub.com/restaurant/el-rincon-de-jorgito-1850-cesar-chavez-st-san-francisco/7752408?utm_source=google&utm_medium=organic&utm_campaign=place-action-link&pickup=true&rwg_token=AAiGsoZv0SSNlTe8JXCOU8-EMxo_ajofr0TIq3boli_KeZbSWe740rjsRbEDcTHtcIjdvf35IuSGjeCput-4S3y7bWSKwYQgyg%3D%3D' },
+  { name: 'DoorDash', icon: '/doordash.com.png', link: 'https://www.doordash.com/store/el-rincon-de-jorgito-san-francisco-27832739/?utm_campaign=gpa&pickup=true&rwg_token=AAiGsoa7Hp33rxLAs60m5iZh8ySQtpa7-9NBqi24IdWyV0gHzGocUvM18VmRI3HwQnNFF2K3l9Z3mlvVrhpXC_q0CkklQWj9XA%3D%3D' },
+];
+
 const Navbar: React.FC = () => {
   const { language, setLanguage, translate } = useLanguage();
 
