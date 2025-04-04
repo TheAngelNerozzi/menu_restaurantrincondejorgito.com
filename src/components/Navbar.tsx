@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         </div>
         
         <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center space-x-6 bg-white/50 px-6 py-2 rounded-full">
+          <div className="flex flex-wrap justify-center md:flex-nowrap items-center gap-4 md:gap-6 bg-white/50 px-4 md:px-6 py-2 rounded-full">
             {deliveryServices.map((service) => (
               <a
                 key={service.name}
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 <img
                   src={service.icon}
                   alt={`${service.name} delivery`}
-                  className="w-12 h-12 object-contain filter brightness-100 hover:brightness-110"
+                  className="w-8 h-8 md:w-12 md:h-12 object-contain filter brightness-100 hover:brightness-110"
                 />
               </a>
             ))}
