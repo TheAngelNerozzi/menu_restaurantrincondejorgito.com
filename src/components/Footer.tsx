@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold mb-2">{translate('about')}</h3>
+              <h3 className="font-semibold mb-2">{translate('location')}</h3>
               <p className="text-sm text-peru-beige/80">1850 Cesar Chavez St</p>
               <p className="text-sm text-peru-beige/80">San Francisco, CA 94107</p>
             </div>
