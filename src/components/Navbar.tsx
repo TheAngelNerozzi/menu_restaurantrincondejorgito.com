@@ -11,12 +11,13 @@ const deliveryServices = [
   { name: 'DoorDash', icon: '/images/doordash.com.png', link: 'https://www.doordash.com/store/el-rincon-de-jorgito-san-francisco-27832739/?utm_campaign=gpa&pickup=true&rwg_token=AAiGsoa7Hp33rxLAs60m5iZh8ySQtpa7-9NBqi24IdWyV0gHzGocUvM18VmRI3HwQnNFF2K3l9Z3mlvVrhpXC_q0CkklQWj9XA%3D%3D' },
 ];
 
+
 const Navbar: React.FC = () => {
   const { language, setLanguage, translate } = useLanguage();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm py-4 px-6">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 rounded-full bg-peru-red flex items-center justify-center">
             <span className="text-white font-bold text-xl">R</span>
@@ -24,7 +25,24 @@ const Navbar: React.FC = () => {
           <span className="font-title text-2xl font-bold text-peru-brown">{translate('appName')}</span>
         </div>
         
-        <div className="flex items-center">
+        <div className="flex items-center gap-6">
+          <div className="hidden md:flex items-center space-x-6 bg-white/50 px-6 py-2 rounded-full">
+            {deliveryServices.map((service) => (
+              <a
+                key={service.name}
+                href={service.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all duration-300 hover:scale-125 hover:opacity-100 opacity-90"
+              >
+                <img
+                  src={service.icon}
+                  alt={`${service.name} delivery`}
+                  className="w-12 h-12 object-contain filter brightness-100 hover:brightness-110"
+                />
+              </a>
+            ))}
+          </div>
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setLanguage('en')}
